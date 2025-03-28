@@ -56,22 +56,57 @@ public class ChatActivity extends AppCompatActivity {
                 editMessage.setText("");
 
                 if (USE_MOCK_RESPONSE) {
-                    // Giả lập phản hồi từ GPT
-                    recyclerChat.postDelayed(() -> {
-                        String mockResponse = "Xin chào! Tôi là ChatGPT. Bạn cần hỗ trợ gì?";
-                        addMessage(mockResponse, "gpt");
-                    }, 1000); // Giả delay 1s cho giống thật
+                    handleMockResponse(userMessage);
                 } else {
                     sendMessageToGPT(userMessage);
                 }
             }
         });
+
+        // Gửi lời chào mặc định khi mở màn hình
+        if (USE_MOCK_RESPONSE) {
+            recyclerChat.postDelayed(() -> {
+                addMessage("Xin chào! Tôi là ChatGPT. Bạn cần hỗ trợ gì?", "gpt");
+            }, 500);
+        }
     }
 
     private void addMessage(String content, String sender) {
         messageList.add(new Message(content, sender));
         chatAdapter.notifyItemInserted(messageList.size() - 1);
         recyclerChat.scrollToPosition(messageList.size() - 1);
+    }
+
+    private int getUserMessageCount() {
+        int count = 0;
+        for (Message msg : messageList) {
+            if ("user".equals(msg.getSender())) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    private void handleMockResponse(String userMessage) {
+        int userCount = getUserMessageCount();
+
+        recyclerChat.postDelayed(() -> {
+            String reply;
+
+            switch (userCount) {
+                case 1:
+                    reply = "Nếu bạn cần hiệu suất cao và làm việc văn phòng, laptop là lựa chọn tốt. Nếu bạn cần tính di động và liên lạc, hãy chọn điện thoại.";
+                    break;
+                case 2:
+                    reply = "Hiện nay iPhone 14 Pro Max có giá khoảng 30-35 triệu VNĐ tùy cấu hình và nơi bán.";
+                    break;
+                default:
+                    reply = "Lỗi server, đang chờ phản hồi...";
+                    break;
+            }
+
+            addMessage(reply, "gpt");
+        }, 4000);
     }
 
     private void sendMessageToGPT(String userMessage) {
