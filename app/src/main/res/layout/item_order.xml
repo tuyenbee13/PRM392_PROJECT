@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/Order_txtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã Đơn Hàng"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Order_txtUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User ID"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Order_txtTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/Order_txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trạng Thái Đơn Hàng"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/Order_txtCreatedDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày tạo đơn"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+</LinearLayout>

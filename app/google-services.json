@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "839467012966",
+    "firebase_url": "https://techstore-81b9b-default-rtdb.firebaseio.com",
+    "project_id": "techstore-81b9b",
+    "storage_bucket": "techstore-81b9b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839467012966:android:5ae065b15558418f8aeea7",
+        "android_client_info": {
+          "package_name": "com.example.electronics_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839467012966-g735aeoa43ql24ai521blo138hapokth.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.electronics_store",
+            "certificate_hash": "9d2cd017c87ba1c0972d451e7af386540c3e4e51"
+          }
+        },
+        {
+          "client_id": "839467012966-9mdql4q3palef3stneh2dgp41jl4g35a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBktVw23Gq5IXi9EfWRquWrmXGnO18-724"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839467012966-9mdql4q3palef3stneh2dgp41jl4g35a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

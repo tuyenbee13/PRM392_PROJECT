@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách yêu thích"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="16dp"/>
+
+    <!-- RecyclerView để hiển thị danh sách sản phẩm yêu thích -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Nút Tiếp tục mua hàng -->
+    <Button
+        android:id="@+id/btnContinueShopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiếp tục mua hàng"
+        android:textAllCaps="false"
+        android:backgroundTint="#0288D1"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="14dp"
+        android:layout_marginTop="16dp"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
+        app:cornerRadius="8dp"/>
+</LinearLayout>

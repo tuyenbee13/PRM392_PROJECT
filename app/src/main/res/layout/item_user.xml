@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/User_txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên Người Dùng"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/User_txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/User_txtRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vai Trò"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@color/red"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/User_txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trạng Thái"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@color/green"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnUpdateUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#FF5722"
+        android:text="Cập nhật"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnBanUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#00BCD4"
+        android:text="Ban"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnUnbanUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#00BCD4"
+        android:text="Unban"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+</LinearLayout>

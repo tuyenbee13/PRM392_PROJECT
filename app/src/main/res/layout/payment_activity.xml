@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".activity.PaymentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Out"
+                    android:textStyle="bold"
+                    android:textColor="#F01303"
+                    android:textSize="30sp"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/customerInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Information"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name:"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/fullName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter full name"
+                    android:textSize="16sp"
+                    android:background="@drawable/custom_search_bar"
+                    android:padding="10dp"
+                    android:textColorHint="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number:"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter phone number"
+                    android:textSize="16sp"
+                    android:background="@drawable/custom_search_bar"
+                    android:padding="10dp"
+                    android:textColorHint="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:background="@drawable/custom_search_bar"
+                    android:padding="10dp"
+                    android:textColorHint="#FFFFFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter address"
+                    android:textSize="16sp"
+                    android:background="@drawable/custom_search_bar"
+                    android:padding="10dp"
+                    android:textColorHint="#FFFFFF"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cartListTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart Items"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:textColor="#FFFFFF"/>
+
+            <ListView
+                android:id="@+id/cartItemListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_search_bar"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price: "
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/paymentMethodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="#FFFFFF"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:backgroundTint="@android:color/white"
+                android:layout_marginTop="8dp">
+
+                <RadioGroup
+                    android:id="@+id/paymentMethodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RadioButton
+                        android:id="@+id/payment_zalopay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh toán qua ZaloPay"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:buttonTint="@color/red"
+                        android:paddingVertical="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/payment_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thanh toán tiền mặt khi nhận hàng"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:buttonTint="@color/red"
+                        android:paddingVertical="12dp" />
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/orderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đặt hàng"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingVertical="14dp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"
+                android:theme="@style/Widget.AppCompat.Button"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

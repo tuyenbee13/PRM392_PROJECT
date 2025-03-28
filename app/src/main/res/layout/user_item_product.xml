@@ -1,0 +1,118 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <!-- Ảnh sản phẩm -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Trạng thái hết hàng -->
+        <TextView
+            android:id="@+id/productStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HẾT HÀNG"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <!-- Thông tin sản phẩm -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"/>
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giá sản phẩm"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:paddingTop="4dp"/>
+
+        <!-- Layout chứa nút hành động -->
+        <LinearLayout
+            android:id="@+id/actionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginEnd="4dp"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/cart"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginStart="4dp"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/btnAddToWishlist"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/favorite_like"
+                    android:background="@null"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!-- Nút Xóa khỏi yêu thích -->
+        <Button
+            android:id="@+id/btnRemoveFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xóa khỏi yêu thích"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textColor="@android:color/white"
+            android:paddingTop="8dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

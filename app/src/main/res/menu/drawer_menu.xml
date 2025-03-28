@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_orders"
+        android:title="Đơn Hàng"
+        />
+
+    <item
+        android:id="@+id/nav_users"
+        android:title="Người Dùng"
+       />
+
+    <item
+        android:id="@+id/nav_products"
+        android:title="Sản Phẩm"
+      />
+
+    <item
+        android:id="@+id/nav_categories"
+        android:title="Loại Hàng"
+       />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Đăng Xuất" />
+</menu>

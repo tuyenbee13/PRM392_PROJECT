@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_user_product"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/nav_user_order_history"
+        android:title="Order History"
+        android:icon="@drawable/ic_order_history" />
+    <item
+        android:id="@+id/nav_user_update_profile"
+        android:title="Update Profile"
+        android:icon="@drawable/ic_update_profile" />
+    <item
+        android:id="@+id/nav_user_change_password"
+        android:title="Change Password"
+        android:icon="@drawable/ic_change_password" />
+    <item
+        android:id="@+id/nav_user_store_location"
+        android:title="Store Location"
+        android:icon="@drawable/ic_store_location" />
+    <item
+        android:id="@+id/nav_user_logout"
+        android:title="Log out"
+        android:icon="@drawable/ic_logout" />
+</menu>
