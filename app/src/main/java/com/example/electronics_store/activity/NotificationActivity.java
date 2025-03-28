@@ -2,6 +2,7 @@ package com.example.electronics_store.activity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.electronics_store.R;
@@ -13,6 +14,10 @@ public class NotificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
+        ImageButton btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(view -> {
+            finish();
+        });
 
         notificationText = findViewById(R.id.notificationText);
 
@@ -22,5 +27,10 @@ public class NotificationActivity extends AppCompatActivity {
 
         // Hiển thị thông báo
         notificationText.setText(notification);
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

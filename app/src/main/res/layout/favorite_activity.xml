@@ -7,21 +7,36 @@
     android:padding="16dp"
     android:background="#F5F5F5">
 
-    <!-- Tiêu đề -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Danh sách yêu thích"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#212121"
-        android:gravity="center"
-        android:paddingBottom="16dp"
-        android:background="#FFFFFF"
-        android:elevation="4dp"
-        android:padding="16dp"/>
+        android:layout_height="63dp">
 
-    <!-- RecyclerView để hiển thị danh sách sản phẩm yêu thích -->
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:paddingBottom="16dp"
+            android:text="Danh sách yêu thích"
+            android:textColor="#212121"
+
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView để hiển thị danh sách sản phẩm yêu thích -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFavorite"
         android:layout_width="match_parent"

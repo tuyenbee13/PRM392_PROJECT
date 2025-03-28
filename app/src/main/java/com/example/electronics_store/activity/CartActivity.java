@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CartActivity extends AppCompatActivity {
+public class    CartActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private TextView totalPriceText;
@@ -39,6 +40,10 @@ public class CartActivity extends AppCompatActivity {
         totalPriceText = findViewById(R.id.total_price_text);
         btnContinueShopping = findViewById(R.id.btn_continue_shopping);
         continueButton = findViewById(R.id.continue_button);
+        ImageButton btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(view -> {
+            finish();
+        });
 
         if (continueButton == null) {
             Toast.makeText(this, "Lỗi: Không tìm thấy continue_button", Toast.LENGTH_SHORT).show();
@@ -146,5 +151,10 @@ public class CartActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

@@ -1,44 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     android:background="#FFFFFF">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thông báo"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:gravity="center"
-        android:paddingBottom="12dp" />
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#F8F8F8">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#CCCCCC" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:text="Thông báo"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/notificationText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Không có thông báo mới."
-        android:textSize="18sp"
-        android:textColor="#333333"
-        android:paddingTop="16dp"
-        android:paddingBottom="8dp" />
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnClearNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Xóa thông báo"
-        android:textSize="16sp"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF"
-        android:visibility="gone"
-        android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/notificationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Không có thông báo mới."
+            android:textColor="#333333"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/btnClearNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xóa thông báo"
+            android:textSize="16sp"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
